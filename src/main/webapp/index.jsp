@@ -1,8 +1,8 @@
 <html>
     <body>
         <h2>
-            Hello World!
+             Start page!
         </h2>
-        <a href="servlet">Click here to see servlet</a>
+        <a href="/hello_world">Hello_world!</a>
     </body>
 </html>
