@@ -1,4 +1,4 @@
-package ru.khrapkov.springMVCApp.beans;
+package ru.khrapkov.springMVCApp.beans.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
