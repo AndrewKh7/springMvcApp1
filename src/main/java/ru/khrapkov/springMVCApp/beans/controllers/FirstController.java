@@ -1,6 +1,7 @@
 package ru.khrapkov.springMVCApp.beans.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,9 +15,10 @@ import java.util.Map;
 public class FirstController {
 
     @GetMapping("/hello")
-    public String helloPage(HttpServletRequest request){
-        System.out.println("Hello");
-        System.out.println(request.getParameter("name"));
+    public String helloPage(HttpServletRequest request, Model model){
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
+        model.addAttribute("message","Hello, " + name + " " + surname);
         return "first/hello"; // то есть файл лежит в проекте в папке views/first
     }
 
