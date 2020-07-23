@@ -17,6 +17,7 @@ public class FirstController {
     @GetMapping("/hello")
     public String helloPage(HttpServletRequest request, Model model){
         String name = request.getParameter("name");
+        request.getParameter("name");
         String surname = request.getParameter("surname");
         model.addAttribute("message","Hello, " + name + " " + surname);
         return "first/hello"; // то есть файл лежит в проекте в папке views/first
